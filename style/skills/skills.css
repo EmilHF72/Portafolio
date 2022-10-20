@@ -1,0 +1,51 @@
+.skills{
+  
+    margin: 2.16rem 9rem 4.16rem 9rem;
+}
+
+.skills__titulo{
+    text-align: center;
+    justify-content: center;
+}
+.skills__ulcon{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0 0 5rem;
+}
+
+.skills__imagen{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.skills__contenedor{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    width: calc(25% - 1rem);
+    
+}
+
+.skills__texto{
+    color: #464646;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+}
+/*------media--------*/
+
+@media screen and (max-width:768px) {
+    .skills__contenedor{
+        width: 25%;
+        margin: 3rem;
+    }
+}
+@media screen and (max-width:360px) {
+    .skills__titulo{
+        width: 100vh;
+        justify-content: center;
+    }
+
+}

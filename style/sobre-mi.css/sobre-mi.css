@@ -1,0 +1,69 @@
+.sobreMi{
+    margin-top: 4rem;
+    background: #EAF2FD;
+    width: 100%;
+   
+}
+
+.sobreMi_imagen{
+    width: 150px;
+    height: 150px;
+    margin-left: 9.5rem;
+    margin-top: 2rem;
+}
+.sobreMi__titulo{
+    color: #464646;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.375rem;
+    margin-left: 9.5rem;
+    margin-right: 33.56rem;
+    padding:  2rem;
+}
+.sobreMi__texto{
+    color: #464646;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    margin-left: 9.5rem;
+    margin-right: 33.56rem;
+}
+
+/*------media--------*/
+
+@media screen and (max-width:768px) {
+    .sobreMi{
+        display: flex;
+        position: relative;
+       flex-direction: column;
+    }
+    .sobreMi__titulo{
+        margin-right: 0;
+    }
+
+    .sobreMi__texto{
+        margin-right: 0rem;
+    }
+    .sobreMi_imagen{
+        width: 80px;
+        height: 80px;
+    }
+
+}
+@media screen and (max-width:360px) {
+    .sobreMi{
+        flex-direction: row;
+        align-items: center;
+      
+    }
+    .sobreMi__titulo{
+        padding: 0;
+
+    }
+    .sobreMi__texto{
+        width: auto;
+    }
+
+}

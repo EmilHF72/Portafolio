@@ -1,0 +1,80 @@
+.banner{
+    display: flex;
+    margin: auto 9rem;
+   justify-content: space-around;
+}
+
+.banner__artconteiner{
+    display:block;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+
+.banner__titulo{
+    color: #464646;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 3.25rem;
+    line-height: 3.5rem;
+}
+
+
+.banner__texto{
+    color: #464646;
+    margin-top: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.86rem;
+    text-align: justify;
+}
+
+.banner__nav{
+    display: flex;
+    list-style: none;
+    justify-content:left;
+    
+}
+
+.banner__nav a{
+    text-decoration: none;
+    color: #464646;
+    font-size: 1.rem;
+    margin-right: 2.5rem;
+}
+
+.banner__imagen{
+    width: 23rem;
+    height: 23rem;
+}
+/*------media--------*/
+
+@media screen and (max-width:768px) {
+    .banner{
+        display: block;
+       justify-content: center;
+       width: 100vh;
+    }
+}
+@media screen and (max-width:360px) {
+    .banner{
+       display: block;
+       justify-content: center;
+       width: 100vh;
+    }
+    .banner__artconteiner{
+
+        margin-right: 0rem;
+
+    }
+    .banner__imagen{
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+        margin-left: 8rem;
+        
+    }
+}

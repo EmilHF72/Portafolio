@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --color-Naranja:  #ff851b;
+}
+body{
+    font-family: 'Century Gothic';
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+
+/*==============================================*/
+
+.titulo{
+    width: 100%;
+    height: 150px;
+    background-color: var(--color-Naranja);
+    display: flex; /*ajuste texto*/
+    align-items: center; /*ajuste vertical*/
+    justify-content: center; /*ajuste horizontal*/
+}
+.titulo h1{
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.Navegacion{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+
+}
+.menu{
+    width: 1000px;
+    display: flex; /*alinea las imagenes a la derecha*/
+    flex-wrap: wrap; /* revisa y utiliza el espacio para todos los elmento */
+    height: 100px;
+
+}
+.menu .primero{
+    border-left: 1px solid #363636;
+
+}
+.menu li{
+    flex-basis: 0; /*se presume 0 porciento de ancho de cada iagen*/
+    flex-grow: 1;  /*que cada imagen sea del mismo tamaño*/
+    border-right: 1px solid #363636;
+    position: relative; /*position: relative coloca un elemento relativo a su posición actual sin cambiar el diseño a su alrededor*/
+                        /*position: absolute coloca un elemento relativo a la posición de su padre y cambia el diseño a su alrededor.*/
+    font-size: 18px;
+}
+.menu li a{
+    display: flex;
+    flex-direction: column;/* que la imagen y erl tecto se alinean hacia abajo*/
+
+}
+.menu .imagen{
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    right: 30px;
+
+    z-index: 20;
+
+    -webkit-transition: all 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    -moz-transition: all 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+     -o-transition: all 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+        transition: all 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000); /* easeOutSine */
+
+    -webkit-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+        transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000); /* easeOutSine */
+
+
+}
+.menu li a .text-items{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-Naranja);
+    top: 0%;
+
+    position: absolute;
+    z-index: 10;
+
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+   -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+     -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+.menu li a .down-items{
+    position: absolute;
+    top: 0%;
+    width: 100%; /*toma las mismas dimensiones del padre*/
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+
+    /*-webkit-transform: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;*/
+    -webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -moz-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+     -o-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+
+.menu li:hover .down-items, .menu li:hover .text-items{
+    top: 100%;
+    height: 115%;
+}
+.menu li:hover .imagen{
+    width: 100%;
+    right: 0%;
+}
